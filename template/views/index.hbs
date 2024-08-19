@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        {{>header}}
+          <a href="/about">About</a>
+        <h1>{{title}}</h1>
+        <p>Use this site to get your Weather!</p>
+      
+        <form action="">
+            <input type="text" placeholder="Location">
+            <button>Search</button>
+            <p id="massage-1"></p>
+            <p id="massage-2"></p>
+        </form>
+   
+    </div>
+    {{>footer}}
+    <script src="/js/AppJs.js"></script>
+</body>
+</html>
