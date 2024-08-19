@@ -1,6 +1,7 @@
 const express = require('express')
 const path = require('path')
 const app = express()
+const cors = require("cors")
 const hbs = require('hbs')
 const geocode = require('./GEO/geoCode')
 const forecast = require('./GEO/forecast')
@@ -16,6 +17,7 @@ app.set('views',pathViews)
 hbs.registerPartials(partialsViews)
 //setup static directory
 app.use(express.static(pathWeb))
+app.use(cors())
 
 
 
