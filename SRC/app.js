@@ -6,6 +6,8 @@ const hbs = require('hbs')
 const geocode = require('./GEO/geoCode')
 const forecast = require('./GEO/forecast')
 
+const port = process.env.PORT || 3000
+
 //define path for express  
 const pathWeb =path.join(__dirname,'../publics')
 const pathViews =path.join(__dirname,'../template/views')
@@ -66,6 +68,6 @@ app.get('*',(req,res) =>{
 })
 
 
-app.listen(3000,() =>{
-console.log('Server is Up')
+app.listen(port,() =>{
+console.log('Server is Up on port '+port)
 })

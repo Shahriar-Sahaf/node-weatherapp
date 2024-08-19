@@ -12,7 +12,7 @@ formFetch.addEventListener('submit',(e)=>{
     massage2.textContent='Please Wait...'
     massage1.textContent=''
    
-    fetch('http://localhost:3000/weather?address='+ locaton).then((response)=>{
+    fetch('/weather?address='+ locaton).then((response)=>{
         response.json().then((data)=>{
 
             if (data.error) {
